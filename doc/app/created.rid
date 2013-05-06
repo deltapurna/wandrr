@@ -1,0 +1,10 @@
+Mon, 06 May 2013 17:18:19 +0800
+doc/README_FOR_APP	Sun, 05 May 2013 06:47:26 +0800
+app/controllers/application_controller.rb	Sun, 05 May 2013 06:47:26 +0800
+app/controllers/destinations_controller.rb	Mon, 06 May 2013 17:16:51 +0800
+app/controllers/trips_controller.rb	Sun, 05 May 2013 07:04:07 +0800
+app/helpers/application_helper.rb	Sun, 05 May 2013 06:47:26 +0800
+app/helpers/destinations_helper.rb	Mon, 06 May 2013 16:12:38 +0800
+app/helpers/trips_helper.rb	Sun, 05 May 2013 07:04:07 +0800
+app/models/destination.rb	Mon, 06 May 2013 16:13:44 +0800
+app/models/trip.rb	Mon, 06 May 2013 16:13:10 +0800
