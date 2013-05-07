@@ -1,4 +1,8 @@
 class TripsController < ApplicationController
+  
+  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :owns_trip, only: [:edit, :update, :destroy]
+
   # GET /trips
   # GET /trips.json
   def index
@@ -78,6 +82,13 @@ class TripsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to trips_url }
       format.json { head :no_content }
+    end
+  end
+
+  private
+  def owns_trip
+    if !user_signed_in? || current_user != Trip.find(params[:id]).user
+      redirect_to trips_path, error: "You cannot do that"
     end
   end
 end
