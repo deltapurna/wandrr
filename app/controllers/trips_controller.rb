@@ -88,7 +88,7 @@ class TripsController < ApplicationController
 
   private
   def owns_trip
-    if !user_signed_in? || current_user != Trip.find(params[:id]).user
+    if !user_signed_in? || (current_user != Trip.find(params[:id]).user && !current_user.admin) 
       redirect_to trips_path, error: "You cannot do that"
     end
   end
